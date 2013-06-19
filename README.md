@@ -40,7 +40,7 @@ Installation and configuration
 <script type="text/javascript" src="js/Preload.js"></script>
 ```
 
-- Just after, create a ```html<SCRIPT>``` tag and paste the following:
+- Just after, create a ```<SCRIPT>``` tag and paste the following:
 
 ```html
 // List the resources to be loaded here:
