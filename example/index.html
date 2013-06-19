@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--[if IE 6]><html class="msie6 msie" lang="fr"><![endif]-->
+<!--[if IE 7]><html class="msie7 msie" lang="fr"><![endif]-->
+<!--[if IE 8]><html class="msie8 msie" lang="fr"><![endif]-->
+<!--[if gte IE 9]><html class="msie9 msie" lang="fr"><![endif]-->
+<!--[if !IE]><!--><html lang="fr"><!-- <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>JS-Preload: A light Javascript library made to preload images and display a progress bar</title>
+	<meta name="viewport" content="initial-scale=1.0" />
+	<meta name="description" content="" />
+	<meta name="robots" content="index,follow" />
+	<link href="favicon.ico" type="image/x-icon" rel="icon" />
+	<link href="favicon.ico" type="image/x-icon" rel="shortcut icon" />
+	
+	<style type="text/css">
+		html, body {
+			background-color: #FFF;
+			color: #333;
+			height: 100%;
+			width: 100%;
+		}
+		#wrapper {
+			display: block;
+			height: 930px;
+			margin: auto;
+			padding: 0 60px 0 60px;
+			width: 1120px;
+		}
+	</style>
+	<!-- Load the preload.css here: -->
+	<link rel="stylesheet" type="text/css" href="css/preload.css" />
+</head>
+
+<body>
+	<!--
+		Your content must be included in a #wrapper element.
+		It will be automatically hidden at the start, and the be displayed again when the preload ends.
+	-->
+	<div id="wrapper">
+		<h1>JS-Preload</h1>
+		<p>The page content is displayed only after the selected images are preloaded.</p>
+	</div>
+	
+	<!-- Load the preload.js here: -->
+	<script type="text/javascript" src="js/Preload.js"></script>
+	<script type="text/javascript">
+		// List the resources to be loaded here:
+		var elements = [
+			'img/bg-content-01.jpg',
+			'img/bg-content-02.jpg',
+			'img/bg-content-03.jpg',
+			'img/bg-content-04.jpg',
+			'img/bg-content-05.jpg'
+		];
+		
+		// Preload instance: 
+		var preload = new Preload();
+		
+		// Preload initialization with the elements to be loaded and a callback method: 
+		preload.init( 'wrapper', elements, function() {
+			// This is the callback method called after the preload finishes, and after the #wrapper content is displayed again 
+			// You can customize here: 
+			alert('Resources loaded!');
+		});
+	</script>
+</body>
+</html>
