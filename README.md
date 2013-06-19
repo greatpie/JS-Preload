@@ -23,7 +23,7 @@ Installation and configuration
 - Download the Preload.js file and paste it in your "js" directory
 - Download the preload.css file and paste it in your "css" directory
 - In the HEAD of the HTML document, include a link to the CSS:
-> <link rel="stylesheet" type="text/css" href="css/preload.css" />
+<pre><code><link rel="stylesheet" type="text/css" href="css/preload.css" /></code></pre>
 - WARNING: the content of your web document must be all included in a
 > <div id="wrapper">...</div>
 - At the bottom of the BODY, include a link to the JS :
