@@ -35,28 +35,34 @@ Installation and configuration
 ```
 
 - At the bottom of the BODY, include a link to the JS :
-> <script type="text/javascript" src="js/Preload.js"></script>
+
+```html
+<script type="text/javascript" src="js/Preload.js"></script>
+```
+
 - Just after, create a <SCRIPT> tag and paste the following:
-> 
-> // List the resources to be loaded here:
-> var elements = [
-> 	/* Customize the files list: */
-> 	'img/bg-content-01.jpg',
-> 	'img/bg-content-02.jpg',
-> 	'img/bg-content-03.jpg',
-> 	'img/bg-content-04.jpg',
-> 	'img/bg-content-05.jpg'
-> ];
-> 
-> // Preload instance: 
-> var preload = new Preload();
-> 
-> // Preload initialization with the elements to be loaded and a callback method: 
-> preload.init( 'wrapper', elements, function() {
-> 	// This is the callback method called after the preload finishes, and after the #wrapper content is displayed again 
-> 	// You can customize here: 
-> 	alert('Resources loaded!');
+
+```html
+// List the resources to be loaded here:
+var elements = [
+	/* Customize the files list: */
+	'img/bg-content-01.jpg',
+	'img/bg-content-02.jpg',
+	'img/bg-content-03.jpg',
+	'img/bg-content-04.jpg',
+	'img/bg-content-05.jpg'
+];
+
+// Preload instance: 
+var preload = new Preload();
+
+// Preload initialization with the elements to be loaded and a callback method: 
+preload.init( 'wrapper', elements, function() {
+	// This is the callback method called after the preload finishes, and after the #wrapper content is displayed again 
+	// You can customize here: 
+	alert('Resources loaded!');
 });
+```
 
 - Then if you want to customize the look of the progress bar, feel free to modify the preload.css content.
 
