@@ -1,4 +1,4 @@
-skrollr 1.0.0
+Preload.js 1.0.0
 =====
 
 A light Javascript library made to preload images and display a progress bar
